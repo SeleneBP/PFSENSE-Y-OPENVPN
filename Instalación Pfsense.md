@@ -70,49 +70,23 @@ Abrimos nuestra máquina virtual de Debian y comprobamos en configuración de re
 
 ## CONFIGURACIÓN DE PFSENSE
 
-Vemos que tiene acceso a internet, pero no puede resolver los DNS.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/d14b29fc-e00a-496a-8cd1-530e7756c796)
+Cuando entramos podemos comprobar que tiene acceso a internet, pero no puede resolver los DNS.
 
 Para la configuración de Pfsense nos tendremos que meter en la url que antes nos dio la máquina virtual de pfsense.
 
 El usuario por defecto es admin y la contraseña pfsense.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/b9b5024f-3ed2-4a41-b301-102511237c35)
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/ce04bfe7-5713-42d5-b964-23dda4637757)
-
-Tendremos que poner un nombre de hostname y lo demas lo dejamos por defecto.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/22d85c8a-b770-4ca1-8f95-401f56be6254)
+Tendremos que poner un nombre de hostname (pfSense.pfsenseasir.lab) y lo demas lo dejamos por defecto.
 
 Ponemos la zona donde nos ubicamos.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/ee429e12-3215-4cfc-98c2-c10f3582e1a6)
-
 Utilizaremos el modo DHCP, pero si fuese para una empresa lo mejor sería una ip estatica.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/bf2d99ec-fd0a-4af0-9dc9-abc0c47c8b64)
-
-Veremos un pequeño resumen.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/d86a4585-e803-433d-916a-cf5477faf8ed)
 
 Pondremos una contraseña para adminitrador.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/89eddb8c-1d8d-4d7c-81a6-2705ffbc385f)
-
 Y le damos a reiniciar para que se guarden los cambios. Cuando se reinicie nos saldrá una pantalla donde pondra 'finish', le damos.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/ce41778b-074a-475d-9d68-a15778726fe3)
-
-Vamos a ver si el servidor pfsense puede resolver los dominios.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/0b08e5f7-69b1-4228-863d-f2320fb80f82)
-
-Y como vemos si lo hace. Ahora comprobaremos si hace ping y vemos que el servidor tiene conectividad con internet.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/bcd9fc5a-0538-45dd-9804-fc967a968edd)
+Vamos a ver si el servidor pfsense puede resolver los dominios y tiene conectividad a internet.
 
 Ahora vamos hacer que el cliente tenga conectividad con internet.
 En interfaces de entrada seleccionamos LAN y Localhost. En la interfaz de salida seleccionamos WAN.
