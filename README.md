@@ -2,23 +2,23 @@
 
 ## ÍNDICE
 
-- [Descripción del proyecto](https://github.com/SeleneBP/VPN-y-Proxmox/blob/main/Explicación.md)
+- [Descripción del proyecto](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/Explicación.md)
 
--  [Introducción teórica](https://github.com/SeleneBP/VPN-y-Proxmox/blob/main/IntroduccionTeorica.md)
+-  [Introducción teórica](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/IntroduccionTeorica.md)
  
--  [Configuración de la red](https://github.com/SeleneBP/VPN-y-Proxmox/blob/main/ConfigRed.md)
+-  [Configuración de la red](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/ConfigRed.md)
 
-- [Intalación Proxmox](https://github.com/SeleneBP/VPN-y-Proxmox/blob/main/Instalación%20Proxmox.md)
+- [Intalación Proxmox](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/Instalación%20Proxmox.md)
 
-- [Intalación Pfsense](https://github.com/SeleneBP/VPN-y-Proxmox/blob/main/Instalación%20Pfsense.md)
+- [Intalación Pfsense](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/Instalación%20Pfsense.md)
 
-- [Integrar proxmox en pfsense](https://github.com/SeleneBP/VPN-y-Proxmox/blob/main/Integrar%20proxmox%20en%20pfsense.md)
+- [Integrar proxmox en pfsense](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/Integrar%20proxmox%20en%20pfsense.md)
 
 - [OpenVPN](https://github.com/SeleneBP/VPN-y-Proxmox/blob/main/OpenVPN.md)
 
 - [Conclusiones y dificualtades encontradas en el proyecto]
 
-- [Referencias](https://github.com/SeleneBP/VPN-y-Proxmox/blob/main/Referencias.md)
+- [Referencias](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/Referencias.md)
 
 
 -----------------------------------------------------------------------------------------
