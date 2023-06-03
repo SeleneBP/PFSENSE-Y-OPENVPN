@@ -6,6 +6,8 @@
 
 - [INSTALACIÓN DE OPENVPN](https://www.youtube.com/watch?v=SzgiIMqEp0c&t=16s)
 
+- [CONEXIÓN VPN CON PFSENSE Y PROXMOX](https://www.youtube.com/watch?v=3kvz30BeXQY)
+
 -----------------------------------------------------------------------------------------
 #### LICENCIA
 
