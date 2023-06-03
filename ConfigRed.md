@@ -16,3 +16,4 @@ El túnel VPN se utiliza para asegurar la comunicación entre los clientes de la
  
 ### Ejemplo Gráfico
 
+![packectracer](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/assets/91204696/df5c5868-8750-46a5-a076-4d09acd33073)
