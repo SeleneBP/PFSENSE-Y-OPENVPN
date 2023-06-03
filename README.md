@@ -16,7 +16,7 @@
 
 - [OpenVPN](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/OpenVPN.md)
 
-- [Conclusiones y dificualtades encontradas en el proyecto]
+- [Conclusiones y dificualtades encontradas en el proyecto](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/Conclusiones.md)
 
 - [Referencias](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/Referencias.md)
 
