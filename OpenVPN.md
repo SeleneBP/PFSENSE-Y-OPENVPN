@@ -70,14 +70,15 @@ En este apartado veremos los usuarios que tenemos creados y al lado de cada uno 
 ![image](imagenes/13-vpn.png)
 
 Ya tendríamos nuestra VPN creada. 
+
 Creamos un Debian nuevo y lo ponemos en red interna para conectarnos de nuevo a pfsense y descarganos los archivos de los usuarios.
 
-![image](imagenes/14-vpn.png)
+![image](imagenes/14-vpn.PNG)
 
 Una vez descargado lo podemos poner de nuevo en adaptador puente.
 Ahora haremos una comprobación, teniendo un cliente debian en adaptador puente veremos que con la autenticación se puede conectar a la VPN.
 
-![image](imagenes/15-vpn.png)
+![image](imagenes/15-vpn.PNG)
 
 Nos metemos donde nos hemos descargado los archivos anteriores y lo extraemos.
 
