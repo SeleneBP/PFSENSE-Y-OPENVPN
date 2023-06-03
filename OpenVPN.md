@@ -81,20 +81,20 @@ Ahora haremos una comprobación, teniendo un cliente debian en adaptador puente 
 
 Nos metemos donde nos hemos descargado los archivos anteriores y lo extraemos.
 
-![image](imagenes/16-vpn.png)
+![image](imagenes/16-vpn.PNG)
 
 En las máquina que queramos conectar através del túnel necesitamos instalar openvpn.
 
-![image](imagenes/17-vpn.png)
+![image](imagenes/17-vpn.PNG)
 
 Luego con el fichero de configuración anterior, por ejemplo de gatito, lo que haremos es poner el comando `openvpn (nombre del fichero.extensión)` y ya nos pedirá la autenticación.
 
-![image](imagenes/18-vpn.png)
+![image](imagenes/18-vpn.PNG)
 
 Para hacer la prueba de fuego, intentaremos entrar al servidor proxmox desde el cliente debian 2, el que tiene el adaptador puente. En principio sin el túnel creado no puede entrar al servidor proxmox porque no está en la misma red, pero una vez que creamos el túnel y accedemos con la autenticación ya podremos acceder al proxmox.
 En la siguiente imagen, se ve a la derecha la ip del túnel a la que estamos conectada, la ip de la propia máquina y a la izquierda vemos que nos hemos podido conectas al promox correctamente.
 
-![image](imagenes/19-vpn.png)
+![image](imagenes/19-vpn.PNG)
 
 
 
