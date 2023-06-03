@@ -7,7 +7,7 @@ Cuando accedemos a la página de PFSENSE através del cliente de debian, tendrem
  Le pondremos un nombre para el certificado, los demás campos se dejan como tal. En el apartado de Internal certificate Authority, lo único que cambiamos es el nombre del certificado, ponemos donde nos ubicamos que sería "ES", luego la ciudad y la provincia, podemos poner el nombre de la organización, pero también lo podemos dejar en blanco.
 **IMPORTANTE!!**. En la sección Certificate Atribute, tenemos que seleccionar en el tipo de certificado el certificado de servidor, es el certificado que responderá el openvpn.
  
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/d540ce79-7668-44e8-8cd8-835509c8b76c)
+![image](imagenes/1-vpn.png)
 
 Una vez creada se verá así.
 
