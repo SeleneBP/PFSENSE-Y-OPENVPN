@@ -14,7 +14,7 @@
 
 - [Integrar proxmox en pfsense](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/Integrar%20proxmox%20en%20pfsense.md)
 
-- [OpenVPN](https://github.com/SeleneBP/VPN-y-Proxmox/blob/main/OpenVPN.md)
+- [OpenVPN](https://github.com/SeleneBP/PFSENSE-Y-OPENVPN/blob/main/OpenVPN.md)
 
 - [Conclusiones y dificualtades encontradas en el proyecto]
 
