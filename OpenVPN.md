@@ -70,3 +70,31 @@ En este apartado veremos los usuarios que tenemos creados y al lado de cada uno 
 ![image](imagenes/13-vpn.png)
 
 Ya tendríamos nuestra VPN creada. 
+Creamos un Debian nuevo y lo ponemos en red interna para conectarnos de nuevo a pfsense y descarganos los archivos de los usuarios.
+
+![image](imagenes/14-vpn.png)
+
+Una vez descargado lo podemos poner de nuevo en adaptador puente.
+Ahora haremos una comprobación, teniendo un cliente debian en adaptador puente veremos que con la autenticación se puede conectar a la VPN.
+
+![image](imagenes/15-vpn.png)
+
+Nos metemos donde nos hemos descargado los archivos anteriores y lo extraemos.
+
+![image](imagenes/16-vpn.png)
+
+En las máquina que queramos conectar através del túnel necesitamos instalar openvpn.
+
+![image](imagenes/17-vpn.png)
+
+Luego con el fichero de configuración anterior, por ejemplo de gatito, lo que haremos es poner el comando `openvpn (nombre del fichero.extensión)` y ya nos pedirá la autenticación.
+
+![image](imagenes/18-vpn.png)
+
+Para hacer la prueba de fuego, intentaremos entrar al servidor proxmox desde el cliente debian 2, el que tiene el adaptador puente. En principio sin el túnel creado no puede entrar al servidor proxmox porque no está en la misma red, pero una vez que creamos el túnel y accedemos con la autenticación ya podremos acceder al proxmox.
+En la siguiente imagen, se ve a la derecha la ip del túnel a la que estamos conectada, la ip de la propia máquina y a la izquierda vemos que nos hemos podido conectas al promox correctamente.
+
+![image](imagenes/19-vpn.png)
+
+
+
