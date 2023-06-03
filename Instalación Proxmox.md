@@ -8,7 +8,7 @@ Y por último tenemos que cambiarle la red, por defecto en esta en NAT, lo pondr
 
 **Muy importante!!**, tenemos que seleccionar por donde tendrá salida a internet si por Wifi o por cable, en mi caso es por Wifi, pero hay que tenerlo muy en cuenta porque si no puede dar problemas de red.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/32124c29-4f0d-4d9b-bdbf-402c3551bcbb)
+![image](imagenes/1-instproxmox.png)
 
 - Iniciamos la máquina.
 Le damos a instalar.
