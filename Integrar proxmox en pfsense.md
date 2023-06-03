@@ -4,11 +4,11 @@ Lo que tenemos que hacer es apagar el proxmox y añadir una tarjeta de red que e
 
 ![image](imagenes/1-integrar.png)
 
-Encendemos proxmox y hacemos ip a. En pricipio la tarjeta de red que hemos añadido saldrá como que está apagada (DOWN), la encedemos con el siguiente comando ip link set "nombre de la tarjeta de red" up, con esto ya estaría encendida. Pero eso no será suficiento, porque pfsense no tiene que dar una IP. Nos metemos en /etc/network/interfaces, ponemos la enp0s8 como dhcp. Reiniciamos y hacemos ip a.
+Encendemos proxmox y hacemos ip a. En pricipio la tarjeta de red que hemos añadido saldrá como que está apagada (DOWN), la encedemos con el siguiente comando ip link set "nombre de la tarjeta de red" up, con esto ya estaría encendida. Pero eso no será suficiento, porque pfsense no tiene que dar una IP. Nos metemos en /etc/network/interfaces, ponemos la enp0s8 como dhcp. Reiniciamos y hacemos ip a. Pero eso no será suficiento, porque pfsense nos tiene que dar una IP. Nos metemos en `/etc/network/interfaces`, ponemos la `enp0s8` como dhcp. Reiniciamos y hacemos ip a.
 
 ![image](imagenes/2-integrar.png)
 
-Pero eso no será suficiento, porque pfsense nos tiene que dar una IP. Nos metemos en `/etc/network/interfaces`, ponemos la `enp0s8` como dhcp. Reiniciamos y hacemos ip a.
+
 
 ![image](imagenes/3-integrar.png)
 
