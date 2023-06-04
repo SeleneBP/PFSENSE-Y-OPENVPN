@@ -2,7 +2,7 @@
 
 OpenVPN ya viene integrado en PFSENSE simplemente tendríamos que configurarlo.
 
-Cuando accedemos a la página de PFSENSE através del cliente de debian, tendremos que irnos a System para crear los certificados, porque necesitamos crar la unidad certificadora que se encarga de emitir los certificados válidos para los usuarios.
+Cuando accedemos a la página de PFSENSE através del cliente de debian, tendremos que irnos a System para crear los certificados, porque necesitamos crear la unidad certificadora que se encarga de emitir los certificados válidos para los usuarios.
 
 Le pondremos un nombre para el certificado, los demás campos se dejan como tal. En el apartado de Internal certificate Authority, lo único que cambiamos es el nombre del certificado, ponemos donde nos ubicamos que sería "ES", luego la ciudad y la provincia, podemos poner el nombre de la organización, pero también lo podemos dejar en blanco.
 **IMPORTANTE!!**. En la sección Certificate Atribute, tenemos que seleccionar en el tipo de certificado el certificado de servidor, es el certificado que responderá el openvpn.
