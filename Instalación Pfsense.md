@@ -2,7 +2,7 @@
 
 Configuramos la máquina como se muestra en la siguiente imagen.
 
-![image](1-pfsense.PNG)
+![image](imagenes/1-pfsense.PNG)
 
 **IMPORTANTE!!**
 Tendremos que tener dos adaptadores. El primero será la WAN y es la que sale a internet y el segundo adaptador de red será la LAN y será la red interna, donde podremos conectar con otras máquinas.
