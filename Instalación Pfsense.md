@@ -28,21 +28,9 @@ Le damos a iniciar la máquina y comenzará la instalación. Dejamos todos los v
 
 ![image](imagenes/10-pfsense.PNG)
 
-![image](imagenes/11-pfsense.PNG)
-
-Ya solo falta esperar a que se instale y le damos a reiniciar
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/ff2ae451-670b-4318-b2f2-f9294eb236e3)
-
-Nos saldrá una pantalla donde nos preguntará si queremos hacer alguna configuración más, le damos que no.
-
-Y en la siguiente pantalla nos aparecerá un mensaje para reiniciar, le damos.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/61358fa7-c087-4c41-8565-182d6ab0480d)
-
 Cuando acabe de reiniciar nos saldrá este menú.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/e1805dbe-1f9b-44c9-a9f8-b96cc9d838ff)
+![image](imagenes/11-pfsense.PNG)
 
 Elegimos la opción 2, para añadir una ip.
 
