@@ -7,10 +7,10 @@ Configuramos la máquina como se muestra en la siguiente imagen.
 **IMPORTANTE!!**
 Tendremos que tener dos adaptadores. El primero será la WAN y es la que sale a internet y el segundo adaptador de red será la LAN y será la red interna, donde podremos conectar con otras máquinas.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/99655909-f200-4f15-bd01-898ee172415b)
+![image](imagenes/2-pfsense.PNG)
 
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/5d0c5889-1ad5-4cb0-b13a-1ed9366d920d)
+![image](imagenes/3-pfsense.PNG)
 
 Le damos a iniciar la máquina y comenzará la instalación. Dejamos todos los valores por defecto en la instalación.
 
