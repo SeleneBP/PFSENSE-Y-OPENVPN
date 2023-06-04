@@ -24,9 +24,9 @@ Le damos a iniciar la máquina y comenzará la instalación. Dejamos todos los v
 
 ![image](imagenes/8-pfsense.PNG)
 
-![image](imagenes/9-pfsense.PNG)
+El RAID de tipo "stripe" o "RAID 0".  Reparte los datos en varios discos duros sin tener redundancian de datos. Esto significa que cada bloque de datos se escribe en un disco diferente.
 
-El RAID de tipo "stripe" o "RAID 0". 
+![image](imagenes/9-pfsense.PNG)
 
 ![image](imagenes/10-pfsense.PNG)
 
