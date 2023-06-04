@@ -26,6 +26,8 @@ Le damos a iniciar la máquina y comenzará la instalación. Dejamos todos los v
 
 ![image](imagenes/9-pfsense.PNG)
 
+El RAID de tipo "stripe" o "RAID 0". 
+
 ![image](imagenes/10-pfsense.PNG)
 
 Cuando acabe de reiniciar nos saldrá este menú.
