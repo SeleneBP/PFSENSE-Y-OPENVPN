@@ -14,21 +14,21 @@ Tendremos que tener dos adaptadores. El primero será la WAN y es la que sale a 
 
 Le damos a iniciar la máquina y comenzará la instalación. Dejamos todos los valores por defecto en la instalación.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/9e112cb2-4fa0-4b93-95a4-384b9574396a)
+![image](imagenes/4-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/0588044c-8f62-4ef9-9f50-1cdde09eded5)
+![image](imagenes/5-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/6a577676-2e2e-4ff6-a9bf-9a42ea1e725c)
+![image](imagenes/6-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/75dc8c9d-2f02-46d8-9bbc-eac8c7f9074b)
+![image](imagenes/7-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/e04aa8ac-b04f-4c2a-93ac-fc2e1dc0b807)
+![image](imagenes/8-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/9b0549de-a1a7-4f70-8e1d-0ce19cccc8ac)
+![image](imagenes/9-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/9e79845f-2d5b-46f5-a398-67a7480ed0bb)
+![image](imagenes/10-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/2ab47a54-5287-4ebd-8648-abecb1b1bdf2)
+![image](imagenes/11-pfsense.PNG)
 
 Ya solo falta esperar a que se instale y le damos a reiniciar
 
