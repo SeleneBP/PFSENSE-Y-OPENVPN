@@ -32,122 +32,132 @@ Cuando acabe de reiniciar nos saldrá este menú.
 
 ![image](imagenes/11-pfsense.PNG)
 
-Elegimos la opción 2, para añadir una ip.
+Elegimos la opción 2, para configurar una ip de la LAN y luego nos pide una máscara de red.
 
-Nos pide que interfaz queremos configurar, en este caso configuraremos la LAN.
-
-Le pondremos una IP y la máscara de 24 bit.
+![image](imagenes/12-pfsense.PNG)
 
 En el siguiente campo lo dejamos vacio al igual que dejamos vacio la ipv6.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/0833e912-79e8-448e-b05c-e87d779b706b)
-
-Le decimos que si queremos habilitar el DHCP y luego establecemos un rango para que les de a nuestras máquinas virtuales.
-
-Y por último no queremos revertir de HTTPS a HTTP.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/df2385ba-04a2-41dd-a809-44a266badaef)
+Le decimos que si queremos habilitar el DHCP y luego establecemos un rango para que les de a nuestras máquinas virtuales. Por último no queremos revertir de HTTPS a HTTP.
 
 Vemos que nos da una URL.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/c020a306-abee-4a05-891c-1fd9ab3b6e0e)
+![image](imagenes/13-pfsense.PNG)
+
+![image](imagenes/14-pfsense.PNG)
+
+Vemos que nos da una URL.
+
+Antes de abrir nuestra máquina Debian debemos de comprobar que le tenemos puesta una tarjeta de red interna con el nombre que le pusimos a la red interna de pfSense.
+
+![image](imagenes/15-pfsense.PNG)
 
 Abrimos nuestra máquina virtual de Debian y comprobamos en configuración de red, que se le ha asignado una ip del rango anterior.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/29d5c311-4c04-44fa-85ad-26fe83e32f4b)
+![image](imagenes/16-pfsense.PNG)
+
+Comprobamos que pueda hacer ping a 8.8.8.8, lo hace correctamente, pero no puede resolver los DNS. Tenemos que hacer que el servidor pueda resolver los DNS y luego configurarlo para que el cliente también pueda.
+
+![image](imagenes/17-pfsense.PNG)
+
+![image](imagenes/18-pfsense.PNG)
 
 ## CONFIGURACIÓN DE PFSENSE
 
-Cuando entramos podemos comprobar que tiene acceso a internet, pero no puede resolver los DNS.
+Para la configuración de pfSense nos tendremos que meter en la url que antes nos dio la máquina virtual de pfsense. Todo esto desde el cliente Debian.
 
-Para la configuración de Pfsense nos tendremos que meter en la url que antes nos dio la máquina virtual de pfsense.
+![image](imagenes/19-pfsense.PNG)
 
 El usuario por defecto es admin y la contraseña pfsense.
 
-Tendremos que poner un nombre de hostname (pfSense.pfsenseasir.lab) y lo demas lo dejamos por defecto.
+![image](imagenes/20-pfsense.PNG)
+
+Empezaremos con la configuración.
+
+![image](imagenes/21-pfsense.PNG)
+
+Tendremos que poner un nombre de hostname (pfsense) y como dominio (pfSense.pfsenseasir.lab) 
+
+![image](imagenes/22-pfsense.PNG)
 
 Ponemos la zona donde nos ubicamos.
 
+![image](imagenes/23-pfsense.PNG)
+
 Utilizaremos el modo DHCP, pero si fuese para una empresa lo mejor sería una ip estatica.
+
+![image](imagenes/24-pfsense.PNG)
+
+En la siguiente pantalla verificaremos si la configuración LAN esta correcta.
+
+![image](imagenes/25-pfsense.PNG)
 
 Pondremos una contraseña para adminitrador.
 
+![image](imagenes/26-pfsense.PNG)
+
 Y le damos a reiniciar para que se guarden los cambios. Cuando se reinicie nos saldrá una pantalla donde pondra 'finish', le damos.
 
-Vamos a ver si el servidor pfsense puede resolver los dominios y tiene conectividad a internet.
+![image](imagenes/27-pfsense.PNG)
 
-Ahora vamos hacer que el cliente tenga conectividad con internet.
-En interfaces de entrada seleccionamos LAN y Localhost. En la interfaz de salida seleccionamos WAN.
+![image](imagenes/28-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/2557fdc1-5d7c-49d9-8ffe-2276a555df14)
+El servidor ya puede resolver los DNS.
 
-Seleccionamos la petición de redireccionamiento de DNS.
+![image](imagenes/29-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/b3d13095-93bb-4702-a005-76be05d8f0f8)
+![image](imagenes/30-pfsense.PNG)
 
-Seleccionamos las opciones para los registros DHCP.
+Nos vamos a DNS resolver en el apartado de services. En interfaces de entrada seleccionamos LAN y Localhost. En la interfaz de salida seleccionamos WAN.
+Seleccionamos la petición de redireccionamiento de DNS. Seleccionamos las opciones para los registros DHCP.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/67a72427-c1c4-4897-a3eb-1f57aff09f01)
+![image](imagenes/31-pfsense.PNG)
 
-Guardamos y nos vamos a configuración avanzada.
+Guardamos y dentro de DNS resolver en el apartado de services, nos vamos a configuración avanzada. Nos vamos directamente al apartado de Advanced Resolver Options.
+Aquí pondrems el Message Cache Size a 512 MB, esto será para almacenar los mensajes caché como bien dice el nombre.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/a812e4eb-6efd-42d9-9553-ca0a2ee0445b)
-
-Seleccionamos la mayor capacidad para el caché dns.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/63960fcc-2e68-4d53-8701-0a5c82c11acd)
-
-Y por últimos seleccionamos 1000 ordenadores para caché.
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/2073b7f5-cef1-440a-a9b7-2f4057e5bd43)
+![image](imagenes/32-pfsense.PNG)
 
 Guardamos y aplicamos los cambios. 
 
-Nos vamos al servidor DHCP y comprobamos el rango que pusimos anteriormente.
+![image](imagenes/33-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/0fca7c90-5113-401e-84ef-7eaed85bab61)
+Nos vamos al DHCP server en servicios y comprobamos el rango que pusimos anteriormente. Esto se comprueba porque puede ser que en el servidor pfSense hayamos un establecido un rango y en esta configuración no se haya establecido del todo, no pasa nada, lo ponemos como queremos o lo dejamos tal cuál no afectará.
 
-Habilitamos la opción para el formato de tiempo
+![image](imagenes/34-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/9ab7f0aa-02be-4adb-816f-7e2523c7ec44)
+Un poco más abajo en other options, habilitamos la opción para el formato de tiempo y para mostrar la gráfica de estadísticas.
 
-Y para mostrar la gráfica de estadísticas.
+![image](imagenes/35-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/98e6c7f4-1c01-48cd-a115-68b01df670bd)
+Nos vamos a las reglas de firewall. Quitaremos la regla de ipv6. 
 
-Nos vamos a las reglas de firewall.
+![image](imagenes/36-pfsense.PNG)
 
-Quitaremos la regla de ipv6.
+Ahora haremos una limpieza en los registros en Status -> System logs -> Settings y añadiremos varias opciones.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/1a48d2a7-37fb-4c44-a451-813117d8f5fc)
+![image](imagenes/37-pfsense.PNG)
 
-Ahora haremos una limpieza en los registros y añadiremos varias opciones.
+Seleccionamos la siguiente casilla para mostrar los registros de forma que esten los registros nuevos arribas y el nº de entrada de registros lo ponemos en 30.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/c77ce189-9376-49aa-82f1-a4e5d3b19d26)
+![image](imagenes/38-pfsense.PNG)
 
-Seleccionamos la siguiente casilla para mostrar los registros de forma que esten los registros nuevos arribas.
+Nos vamos de nuevo al firewall y editamos la regla de IPV4 LAN NET, habilitando la casilla para que nos muestre todos los registros de paquete de datos.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/19c57237-d277-4169-816e-3f7ddbe7e95e)
+![image](imagenes/39-pfsense.PNG)
 
-El nº de entrada de registros lo ponemos en 30.
+![image](imagenes/40-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/4ab4ca45-def5-4fbe-bf4a-dd2e3afc1f3a)
+Le damos al botón donde nos dice Advanced options y nos vamos al apartado TCP Flags y marcamos ANY Flags, para utilizar todos los TCP Flags (son los indicadores específicos que se establecen en el encabezado de un paquete TCP, por ejemplo, SYN, ACK, etc).
 
-Nos vamos de nuevo al firewall y editamos la regla de ipv4 habilitando la casilla para que nos muestre todos los registros de paquete de datos.
+![image](imagenes/41-pfsense.PNG)
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/a9b1555a-ef9b-4bf6-9c73-bfe8b7004e74)
+Ahora comprobamos si tenemos ping a google, si la configuración es correcta hará ping. También comprobaremos si el cliente puede resolver los DNS, por ejemplo nos meteremos en google y pondremos cualquier cosa.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/5eb04811-dbcc-4524-925d-d287fa3b7374)
+![image](imagenes/42-pfsense.PNG)
 
-Ahora comprobamos si tenemos ping a google, si la configuración es correcta hará ping.
+Para ver las estadísticas de los registros de paquete de datos, nos metemos en Status -> System Logs -> Firewall -> Summary View.
 
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/7e3f157d-3af8-4ef5-937b-e2c2a9d7aaa5)
-
-Para ver los registros:
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/d1743cb8-4b18-4439-99bd-4dd8b4b59d29)
-
-![image](https://github.com/SeleneBP/VPN-y-Proxmox/assets/91204696/bc456e61-f5ab-4fa3-a449-ee57fcca50a8)
+![image](imagenes/43-pfsense.PNG)
 
 -----------------------------------------------------------------------------------------
 #### LICENCIA
