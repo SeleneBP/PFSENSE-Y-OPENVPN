@@ -36,7 +36,7 @@ Tenemos que quitar los algoritmos que viene por defecto para seleccionar los nue
 
 ![image](imagenes/6-vpn.png)
 
-Crearemos el túnel, para conectarnos al servidor OPENVPN, la cuál nos asignará una direccion IP, esta direccin ip tendrá acceso total a la red interna.
+En el mismo apartado, crearemos el túnel, para conectarnos al servidor OPENVPN, la cuál nos asignará una direccion IP, esta direccin ip tendrá acceso total a la red interna.
 
 ![image](imagenes/7-vpn.png)
 
