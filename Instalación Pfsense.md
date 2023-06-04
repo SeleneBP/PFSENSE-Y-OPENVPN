@@ -155,9 +155,11 @@ Ahora comprobamos si tenemos ping a google, si la configuración es correcta har
 
 ![image](imagenes/42-pfsense.PNG)
 
+![image](imagenes/43-pfsense.PNG)
+
 Para ver las estadísticas de los registros de paquete de datos, nos metemos en Status -> System Logs -> Firewall -> Summary View.
 
-![image](imagenes/43-pfsense.PNG)
+![image](imagenes/44-pfsense.PNG)
 
 -----------------------------------------------------------------------------------------
 #### LICENCIA
